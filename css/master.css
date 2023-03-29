@@ -1,0 +1,244 @@
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --green-color: green;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Start Components */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading+p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading+p {
+        margin-top: -20px;
+    }
+}
+/* End Components */
+
+/* Start nav */
+.navbar{
+    background-color: white;
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover{
+    color: var(--green-color);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.navbar-brand{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+/* End nav */
+
+/* Start landing */
+.landing{
+    height: 100vh;
+    background-image: url(../image/landing-image-1.webp);
+    background-size: cover;
+}
+
+.landing h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+/* End landing */
+
+/* Start futures */
+.features{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.features svg{
+    color: var(--main-color);
+}
+
+@media(max-width: 767px){
+    .features .row{
+        gap: 3rem;
+    }
+}
+
+/* End futures */
+
+/* Start services */
+.services{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.services svg{
+    color: var(--main-color);
+}
+
+.services .image{
+    position: relative;
+    width: 250px;
+    margin-bottom: 6rem;
+}
+
+.services .image::before{
+    content: "";
+    position: absolute;
+    top: -31px;
+    right: -50px;
+    width: 200px;
+    height: 400px;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+/* End services */
+
+/* Start gallery */
+.our-gallery{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.our-gallery .carousel{
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+@media (max-width: 992px){
+    .our-gallery .carousel{
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px){
+    .our-gallery .carousel{
+        width: 100%;
+    }
+}
+/* End gallery */
+
+/* Start portfolio */
+.portfolio{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem
+}
+
+.card h4{
+    font-weight: 700;
+}
+/* End portfolio */
+
+/* Start About */
+.about{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.about .image img{
+    width: 300px;
+}
+
+.about .text p:nth-child(1){
+    font-weight: 700;
+}
+
+.about hr{
+    width: 50%;
+    display: inline-block;
+    border-color:  var(--main-color);
+}
+
+/* End About */
+
+/* Start contact */
+.contact{
+    padding-top: var(--section-padding);
+    padding-bottom: 100px;
+    background-color: var(--section-background);
+    color: var(--secondary-color);
+}
+
+.contact .info p{
+    font-weight: 700;
+}
+
+.contact .link{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--main-color);
+}
+/* End contact */
+
+/* Start Footer */
+.footer{
+    background-color: var(--secondary-color);
+    height: 80px;
+}
+
+.footer span{
+    font-weight: 700;
+    margin: 0 .25rem;
+    color: var(--main-color);
+}
+/* End Footer */
